@@ -11134,3 +11134,65 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 560ms (Views: 467.1ms | ActiveRecord: 13.5ms | Allocations: 223143)
 
 
+Started GET "/" for 127.0.0.1 at 2022-11-21 00:12:11 +0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mMicropost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` WHERE `microposts`.`user_id` = 3[0m
+  ↳ app/views/shared/_user_info.html.erb:4
+  Rendered shared/_user_info.html.erb (Duration: 17.7ms | Allocations: 3964)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mUser Count (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 3[0m
+  ↳ app/views/shared/_stats.html.erb:5
+  [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 3[0m
+  ↳ app/views/shared/_stats.html.erb:11
+  Rendered shared/_stats.html.erb (Duration: 44.8ms | Allocations: 7960)
+  Rendered shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 213)
+  Rendered shared/_micropost_form.html.erb (Duration: 6.9ms | Allocations: 1662)
+  [1m[36mMicropost Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `microposts` LEFT OUTER JOIN `users` ON `users`.`id` = `microposts`.`user_id` LEFT OUTER JOIN `relationships` ON `relationships`.`followed_id` = `users`.`id` LEFT OUTER JOIN `users` `followers_users` ON `followers_users`.`id` = `relationships`.`follower_id` WHERE (relationships.follower_id = '3' or microposts.user_id = '3')[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mMicropost Load (0.9ms)[0m  [1m[34mSELECT `microposts`.* FROM `microposts` LEFT OUTER JOIN `users` ON `users`.`id` = `microposts`.`user_id` LEFT OUTER JOIN `relationships` ON `relationships`.`followed_id` = `users`.`id` LEFT OUTER JOIN `users` `followers_users` ON `followers_users`.`id` = `relationships`.`follower_id` WHERE (relationships.follower_id = '3' or microposts.user_id = '3') ORDER BY `microposts`.`created_at` DESC LIMIT 30 OFFSET 0[0m
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/microposts/_micropost.html.erb:2
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  Rendered collection of microposts/_micropost.html.erb [2 times] (Duration: 243.6ms | Allocations: 132688)
+  Rendered shared/_feed.html.erb (Duration: 258.7ms | Allocations: 135674)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 337.0ms | Allocations: 150915)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/helpers/sessions_helper.rb:43:in `current_user'
+  Rendered shared/_header.html.erb (Duration: 4.3ms | Allocations: 2140)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 462.0ms | Allocations: 191425)
+Completed 200 OK in 580ms (Views: 459.8ms | ActiveRecord: 32.7ms | Allocations: 222911)
+
+

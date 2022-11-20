@@ -1,3 +1,5 @@
+
+
 version: 2.1
 
 commands:
@@ -15,14 +17,14 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:3.0.0
+      - image: circleci/ruby:3.1.2
     steps:
       - checkout
       - configure_bundler
 
   rubocop:
     docker:
-      - image: circleci/ruby:3.0.0-node-browsers-legacy
+      - image: circleci/ruby:3.1.2-node-browsers-legacy
     steps:
       - checkout
       - configure_bundler
@@ -36,3 +38,4 @@ workflows:
     jobs:
       - build
       # - rubocop
+Footer

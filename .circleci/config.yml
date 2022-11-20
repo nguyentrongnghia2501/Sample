@@ -14,7 +14,7 @@ executors:
           DB_HOST: 127.0.0.1
           DB_USERNAME: root
           DB_PASSWORD: ''
-      - image: cimg/mysql:8.0
+      - image: cimg/mysql:8.0.30
         command: [--default-authentication-plugin=mysql_native_password]
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'true'

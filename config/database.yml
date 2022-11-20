@@ -54,6 +54,6 @@ production:
   <<: *default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-  database: hair_app_production
-  username: hair_app
-  password: <%= ENV["HAIR_APP_DATABASE_PASSWORD"] %>
+  database: Sample
+  username: Sample
+  password: <%= ENV["Sample_DATABASE_PASSWORD"] %>
